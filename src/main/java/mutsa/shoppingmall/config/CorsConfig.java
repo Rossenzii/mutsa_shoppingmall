@@ -14,8 +14,8 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:3000",
-                                "http://13.124.37.188",
-                                "https://13.124.37.188",
+                                "http://3.35.240.152",
+                                "https://3.35.240.152",
                                 "http://shmall.store",
                                 "https://shmall.store",
                                 "https://shmall.store:8080",
