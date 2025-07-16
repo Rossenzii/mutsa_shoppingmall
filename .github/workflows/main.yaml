@@ -51,6 +51,6 @@ jobs:
             cd /home/ubuntu
             pkill -f 'shoppingmall-0.0.1-SNAPSHOT.jar' || true
             nohup java -Xms128m -Xmx512m -jar shoppingmall-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
-
+            disown
 
 
