@@ -27,11 +27,11 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build -x test
-        env:
-          DB_USERNAME: ${{ secrets.DB_USERNAME }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-
+        run: |
+          ./gradlew build -x test \
+          -Dspring.datasource.username=${{ secrets.DB_USERNAME }} \
+          -Dspring.datasource.password=${{ secrets.DB_PASSWORD }}          
+          
       - name: Copy JAR to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
