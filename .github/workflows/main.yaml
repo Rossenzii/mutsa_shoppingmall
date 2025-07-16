@@ -48,7 +48,6 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            sudo systemctl stop shoppingmall
             sudo systemctl start shoppingmall
 
 
