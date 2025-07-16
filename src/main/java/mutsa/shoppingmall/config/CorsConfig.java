@@ -19,7 +19,9 @@ public class CorsConfig {
                                 "http://shmall.store",
                                 "https://shmall.store",
                                 "https://shmall.store:8080",
-                                "http://shmall.store:8080")
+                                "http://shmall.store:8080",
+                                "https://week5-shopping-mall-fmc6.vercel.app"
+                        )
                         .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);  // 쿠키 허용
