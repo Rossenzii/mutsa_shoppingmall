@@ -41,16 +41,14 @@ jobs:
           source: "build/libs/shoppingmall-0.0.1-SNAPSHOT.jar"
           target: "/home/ubuntu/"
 
-      - name: Run JAR on EC2
+      - name: Restart JAR Service on EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu
-            pkill -f 'shoppingmall-0.0.1-SNAPSHOT.jar' || true
-            nohup java -Xms128m -Xmx512m -jar shoppingmall-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
-            disown
+            sudo systemctl stop shoppingmall
+            sudo systemctl start shoppingmall
 
 
