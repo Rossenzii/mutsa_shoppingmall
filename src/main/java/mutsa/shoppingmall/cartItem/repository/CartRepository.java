@@ -2,7 +2,7 @@ package mutsa.shoppingmall.cartItem.repository;
 
 
 import mutsa.shoppingmall.cartItem.entity.Cart;
-import mutsa.shoppingmall.cartItem.entity.User;
+import mutsa.shoppingmall.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

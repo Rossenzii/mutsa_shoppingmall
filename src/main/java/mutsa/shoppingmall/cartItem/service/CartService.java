@@ -1,8 +1,9 @@
 package mutsa.shoppingmall.cartItem.service;
 import lombok.RequiredArgsConstructor;
 import mutsa.shoppingmall.cartItem.entity.Cart;
-import mutsa.shoppingmall.cartItem.entity.User;
+import mutsa.shoppingmall.user.entity.User;
 import mutsa.shoppingmall.cartItem.repository.CartRepository;
+import mutsa.shoppingmall.user.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -2,6 +2,7 @@ package mutsa.shoppingmall.cartItem.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import mutsa.shoppingmall.user.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,9 @@
-package mutsa.shoppingmall.cartItem.entity;
+package mutsa.shoppingmall.user.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import mutsa.shoppingmall.cartItem.entity.Cart;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 
@@ -15,7 +17,6 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long userId;
 
     private String userName;

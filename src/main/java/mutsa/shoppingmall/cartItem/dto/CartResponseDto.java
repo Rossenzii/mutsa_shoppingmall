@@ -7,7 +7,6 @@ import java.util.List;
 
 @Getter
 @AllArgsConstructor
-
 public class CartResponseDto {
     private List<CartItemResponseDto> cartItems;
     private int cartTotalPrice;
