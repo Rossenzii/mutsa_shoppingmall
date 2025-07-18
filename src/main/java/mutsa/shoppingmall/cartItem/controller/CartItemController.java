@@ -32,7 +32,7 @@ public class CartItemController {
         cartItemService.deleteCartItem(cartItemId);
         return ResponseEntity.noContent().build();
     }
-    @GetMapping
+    @GetMapping("/{userId}")
     public ResponseEntity<List<CartItemResponseDto>> getCartItems(@PathVariable Long userId) {
         CartResponseDto responseDto = cartItemService.getCartItems(userId);
         return ResponseEntity.ok(responseDto.getCartItems());
